@@ -46,7 +46,6 @@
 - **LinearSVC** — устойчивый классификатор для текстов.
 - **CatBoostClassifier** — градиентный бустинг, способный учитывать категориальные особенности и нелинейные зависимости.
 
-> ✅ Лучшая модель: **CatBoostClassifier**, `F1 ≈ 0.78` на валидации.
 
 ### 4. Интерпретация модели
 
@@ -59,15 +58,18 @@
 
 ## Использованные технологии
 
-- `Python`, `Pandas`, `NLTK`, `re`, `Sklearn`, `CatBoost`
+- `Python`, `Pandas`, `NLTK`,  `CatBoost`
+- `scikit-learn` (`TF–IDF`, `Pipeline`, `StratifiedKFold`, `GridSearchCV`, `LogisticRegression`, `SGDClassifier`, `LinearSVC`, `RandomForestClassifier`, `CalibratedClassifierCV`)  
 - `TfidfVectorizer`, `GridSearchCV`
-- Метрики: `F1-score`, `Accuracy`, `Confusion Matrix`
+- - `CatBoost` (`CatBoostClassifier`, `Pool`, `cv`)  
+- `scipy.sparse`  
+- `PyTorch` (`torch`)  
 
 ## Результаты
 
 - **Модель CatBoost показала наилучший результат:**  
-  `F1 ≈ 0.78` на валидации  
-  `F1 ≈ 0.76` на тесте
+  `F1 ≈ 0.78` 
+  `ROC-AUC = 0.96`
 - Модель устойчива к дисбалансу классов.
 - Проведён анализ значимых признаков — выявлены ключевые слова токсичности.
 - Подготовлен готовый пайплайн для обработки новых комментариев.
