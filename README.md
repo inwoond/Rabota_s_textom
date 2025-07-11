@@ -15,8 +15,6 @@
 
 ## Описание данных
 
-Данные можно скачать по [ссылке](https://code.s3.yandex.net/datasets/toxic_comments.csv).
-
 Исходный файл: **`toxic_comments.csv`**
 
 - `text` — текст пользовательского комментария.
